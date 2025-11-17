@@ -1,0 +1,17 @@
+.about-page {
+  background: #181818;
+  text-align: left;
+  padding: 15px;
+  margin-left: 30px;
+  color: #d1d1d1;
+  min-height: 100vh;
+}
+
+.about-page h2 {
+  color: #ffffff;
+  margin-top: 0;
+}
+
+.about-page p {
+  line-height: 1.6;
+}
