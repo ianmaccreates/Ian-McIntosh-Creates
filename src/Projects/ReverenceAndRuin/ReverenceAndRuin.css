@@ -1,0 +1,26 @@
+/* ReverenceAndRuin.css */
+.reverence-and-ruin-page {
+  padding: 20px;
+  color: #fff;
+  background: #000;
+  min-height: 100vh;
+}
+
+.rnr-gallery {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.rnr-item img {
+  width: 220px;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
+}
+
+.rnr-item img[loading="lazy"] {
+  background: linear-gradient(90deg, #111 0%, #232323 100%);
+  min-height: 140px;
+}
