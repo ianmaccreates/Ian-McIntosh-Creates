@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Thumbnails generated for ReverenceAndRuin gallery
+src/Projects/ReverenceAndRuin/images/thumbs/
