@@ -1,31 +1,42 @@
 import React, { useRef, useEffect } from 'react';
 import "./ReverenceAndRuin.css";
-import lg from 'lightgallery';
-import lgZoom from 'lg-zoom';
-import lgThumbnail from 'lg-thumbnail';
 import 'lightgallery/css/lightgallery.css';
-import 'lightgallery/css/lg-zoom.css';
-import 'lightgallery/css/lg-thumbnail.css';
-
 
 const ReverenceAndRuin = () => {
   const galleryRef = useRef(null);
 
   useEffect(() => {
     if (!galleryRef.current) return;
-    const instance = lg(galleryRef.current, {
-      plugins: [lgZoom, lgThumbnail],
-      speed: 500,
-      licenseKey: '',
+    
+    // Use lightgallery as a basic gallery without plugins for now
+    const links = galleryRef.current.querySelectorAll('a');
+    links.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const img = new Image();
+        img.src = link.href;
+        img.onload = () => {
+          // Simple lightbox modal
+          const modal = document.createElement('div');
+          modal.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            cursor: pointer;
+          `;
+          modal.innerHTML = `<img src="${link.href}" style="max-width: 90%; max-height: 90%; object-fit: contain;" />`;
+          modal.onclick = () => modal.remove();
+          document.body.appendChild(modal);
+        };
+      });
     });
-
-    return () => {
-      try {
-        instance.destroy();
-      } catch (e) {
-        // ignore
-      }
-    };
   }, []);
 
   // Lazy-load gallery images using IntersectionObserver (with native fallbacks)
