@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import './Polacon.css';
 
-const Polacon10 = () => {
+const Polacon7 = () => {
   const galleryRef = useRef(null);
 
   useEffect(() => {
@@ -80,7 +80,7 @@ const Polacon10 = () => {
 
   return (
     <div className="polacon-page">
-      <h2>POLACON 10</h2>
+      <h2>POLACON 7</h2>
       <div ref={galleryRef} className="masonry-gallery">
         {images.map((imgObj, i) => (
           <a key={i} href={imgObj.src} className="masonry-item">
@@ -98,4 +98,4 @@ const Polacon10 = () => {
   );
 };
 
-export default Polacon10;
+export default Polacon7;

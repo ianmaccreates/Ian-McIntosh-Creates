@@ -1,26 +1,62 @@
 /* ReverenceAndRuin.css */
 .reverence-and-ruin-page {
   padding: 20px;
+  margin-left: 30px;
   color: #fff;
   background: #000;
   min-height: 100vh;
 }
 
+.reverence-and-ruin-page h2 {
+  margin-bottom: 20px;
+}
+
 .rnr-gallery {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 12px;
-  flex-wrap: wrap;
+  grid-auto-rows: 250px;
+}
+
+.rnr-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.rnr-item:hover {
+  transform: scale(1.02);
 }
 
 .rnr-item img {
-  width: 220px;
-  height: 140px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 4px;
+  transition: opacity 0.2s;
 }
 
-.rnr-item img[loading="lazy"] {
+.rnr-item img[data-src] {
+  opacity: 0.5;
   background: linear-gradient(90deg, #111 0%, #232323 100%);
-  min-height: 140px;
+}
+
+.rnr-item img:not([data-src]) {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .rnr-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-auto-rows: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .rnr-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-auto-rows: 100px;
+  }
 }

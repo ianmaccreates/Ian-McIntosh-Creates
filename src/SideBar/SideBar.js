@@ -13,7 +13,16 @@ const Sidebar = () => {
   const menuItems = [
     { label: 'Home', to: '/', key: 'home' },
     { label: 'Portraits', to: '/portraits', key: 'portraits' },
-    { label: 'Polaroids', to: '/polaroids', key: 'polaroids' },
+    {
+      label: 'Polaroids',
+      key: 'polaroids',
+      submenus: [
+        { label: 'Polacon 7', to: '/polaroids/polacon-7' },
+        { label: 'Polacon 8', to: '/polaroids/polacon-8' },
+        { label: 'Polacon 9', to: '/polaroids/polacon-9' },
+        { label: 'Polacon 10', to: '/polaroids/polacon-10' },
+      ],
+    },
     {
       label: 'Projects',
       key: 'projects',
@@ -25,7 +34,7 @@ const Sidebar = () => {
     },
     { label: 'About', to: '/info', key: 'about' },
     { label: 'Contact', to: '/contact', key: 'contact' },
-    { label: 'Blog', to: '/blog', key: 'blog' },
+    { label: 'Blog', href: 'https://ianmaccreates.substack.com/', key: 'blog' },
   ];
 
   return (
@@ -45,6 +54,10 @@ const Sidebar = () => {
                   ▼
                 </span>
               </button>
+            ) : item.href ? (
+              <a href={item.href} className="nav-link" target="_blank" rel="noopener noreferrer">
+                {item.label}
+              </a>
             ) : (
               <NavLink to={item.to} className="nav-link">
                 {item.label}
