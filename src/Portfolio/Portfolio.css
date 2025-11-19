@@ -1,0 +1,35 @@
+.portfolio-page {
+  padding: 20px;
+  margin-left: 30px;
+  color: #fff;
+  background: #000;
+  min-height: 100vh;
+}
+
+.portfolio-page h2 {
+  margin-bottom: 20px;
+}
+
+.portfolio-gallery {
+  width: 100%;
+}
+
+.plock-item {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.plock-item:hover {
+  transform: scale(1.02);
+}
+
+.plock-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}

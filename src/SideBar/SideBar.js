@@ -12,7 +12,7 @@ const Sidebar = () => {
   // Define menu items with optional submenus
   const menuItems = [
     { label: 'Home', to: '/', key: 'home' },
-    { label: 'Portraits', to: '/portraits', key: 'portraits' },
+    { label: 'Portfolio', to: '/portfolio', key: 'portfolio' },
     {
       label: 'Polaroids',
       key: 'polaroids',

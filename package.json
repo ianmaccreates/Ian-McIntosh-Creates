@@ -12,6 +12,7 @@
     "lightgallery": "^2.9.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-plock": "^3.6.1",
     "react-router-dom": "^7.9.6",
     "react-scripts": "5.0.1",
     "sharp": "^0.34.5",
