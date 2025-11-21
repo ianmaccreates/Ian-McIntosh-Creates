@@ -5,13 +5,21 @@ import 'slick-carousel/slick/slick-theme.css';
 import './ItalianCarFest22.css';
 
 const ItalianCarFest22 = () => {
-  // Load images from the local images folder
-  const imagesContext = require.context('./images', false, /\.(webp|jpe?g|png|gif)$/i);
-  const images = imagesContext.keys().map((key) => {
-    const src = imagesContext(key);
-    const filename = key.replace('./', '');
-    return { id: filename, src, filename };
-  });
+  // Load images from the local images folder. If the folder doesn't exist,
+  // fall back to an empty array so the component doesn't crash during build.
+  let images = [];
+  try {
+    // load from images22 per request
+    const imagesContext = require.context('./images22', false, /\.(webp|jpe?g|png|gif)$/i);
+    images = imagesContext.keys().map((key) => {
+      const src = imagesContext(key);
+      const filename = key.replace('./', '');
+      return { id: filename, src, filename };
+    });
+  } catch (err) {
+    // No images folder or no matching files; images stays as []
+    // console.warn('ItalianCarFest22: no images found', err);
+  }
 
   const sliderRef = useRef(null);
 
