@@ -2,10 +2,9 @@ import React, { useRef, useEffect } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import './Portfolio.css';
+import './NoNoMango.css';
 
-const Portfolio = () => {
-  // Dynamically load all images
+const NoNoMango = () => {
   const imagesContext = require.context('./images', false, /\.(webp|jpe?g|png|gif)$/i);
   const images = imagesContext.keys().map((key) => {
     const src = imagesContext(key);
@@ -34,26 +33,18 @@ const Portfolio = () => {
       }
     };
     window.addEventListener('keydown', handleKeyDown);
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-    };
+    return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
   return (
-    <div className="portfolio-page">
-      <h2>PORTFOLIO</h2>
-      <p className="portfolio-note">Use the left and right arrow keys to navigate through the slides.</p>
-      <div className="portfolio-slider">
+    <div className="nonomango-page">
+      <h2>NoNoMango</h2>
+      <p className="nonomango-note">Use ← and → to navigate</p>
+      <div className="nonomango-slider">
         <Slider ref={sliderRef} {...settings}>
-          {images.map((item) => (
-            <div key={item.id} className="portfolio-slide">
-              <img
-                src={item.src}
-                alt={item.filename}
-                loading="lazy"
-                decoding="async"
-                className="portfolio-slide-img"
-              />
+          {images.map((img) => (
+            <div key={img.id} className="nonomango-slide">
+              <img src={img.src} alt={img.filename} className="nonomango-slide-img" loading="lazy" decoding="async" />
             </div>
           ))}
         </Slider>
@@ -62,4 +53,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default NoNoMango;

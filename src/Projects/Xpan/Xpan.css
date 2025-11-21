@@ -1,0 +1,58 @@
+.xpan-page {
+  padding: 20px;
+  margin-left: 30px;
+  color: #fff;
+  background: #000;
+  min-height: 100vh;
+}
+
+.xpan-page h2 {
+  margin-bottom: 6px;
+}
+
+.xpan-note {
+  font-size: 10px;
+  color: #ccc;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.xpan-slider {
+  max-width: auto;
+  margin: 0 auto;
+  position: relative;
+}
+
+.xpan-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  overflow: hidden;
+  height: 70vh;
+}
+
+.xpan-slide-img {
+  max-width: 90%;
+  max-height: 100%;
+  border: 8px solid #fff;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* bring arrows closer */
+.xpan-slider .slick-prev,
+.xpan-slider .slick-next {
+  z-index: 2;
+  width: 36px;
+  height: 36px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border-radius: 50%;
+  color: #fff;
+  opacity: 0.9;
+}
+.xpan-slider .slick-prev { left: 8px; }
+.xpan-slider .slick-next { right: 8px; }

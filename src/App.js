@@ -9,6 +9,9 @@ import Polacon7 from './Projects/Polacon/Polacon7';
 import Polacon8 from './Projects/Polacon/Polacon8';
 import Polacon9 from './Projects/Polacon/Polacon9';
 import Polacon10 from './Projects/Polacon/Polacon10';
+import Xpan from './Projects/Xpan/Xpan';
+import NoNoMango from './Projects/NoNoMango/NoNoMango';
+import ItalianCarFest22 from './Projects/ItalianCarFest/ItalianCarFest22';
 import { Routes, Route } from 'react-router-dom';
 
 function Home() {
@@ -21,7 +24,6 @@ function Home() {
   );
 }
 
-const Portfolio = () => <div className="page"><h2>Portfolio</h2></div>;
 const Contact = () => <div className="page"><h2>Contact</h2></div>;
 
 function App() {
@@ -37,6 +39,9 @@ function App() {
         <Route path="/projects" element={<ReverenceAndRuin />} />
         <Route path="/projects/nnamdi-25" element={<Nnamdi25 />} />
         <Route path="/projects/virtual-limbs" element={<VirtualLimbs />} />
+        <Route path="/projects/nonomango" element={<NoNoMango />} />
+        <Route path="/projects/italiancarfest22" element={<ItalianCarFest22 />} />
+        <Route path="/projects/xpan" element={<Xpan />} />
         <Route path="/info" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>

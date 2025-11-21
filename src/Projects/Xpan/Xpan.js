@@ -2,10 +2,9 @@ import React, { useRef, useEffect } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import './Portfolio.css';
+import './Xpan.css';
 
-const Portfolio = () => {
-  // Dynamically load all images
+const Xpan = () => {
   const imagesContext = require.context('./images', false, /\.(webp|jpe?g|png|gif)$/i);
   const images = imagesContext.keys().map((key) => {
     const src = imagesContext(key);
@@ -25,6 +24,7 @@ const Portfolio = () => {
     arrows: true,
   };
 
+  // Optional: allow arrow keys to navigate this gallery too
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === 'ArrowLeft') {
@@ -34,26 +34,18 @@ const Portfolio = () => {
       }
     };
     window.addEventListener('keydown', handleKeyDown);
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-    };
+    return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
   return (
-    <div className="portfolio-page">
-      <h2>PORTFOLIO</h2>
-      <p className="portfolio-note">Use the left and right arrow keys to navigate through the slides.</p>
-      <div className="portfolio-slider">
+    <div className="xpan-page">
+      <h2>XPAN</h2>
+      <p className="xpan-note">Use ← and → to navigate</p>
+      <div className="xpan-slider">
         <Slider ref={sliderRef} {...settings}>
-          {images.map((item) => (
-            <div key={item.id} className="portfolio-slide">
-              <img
-                src={item.src}
-                alt={item.filename}
-                loading="lazy"
-                decoding="async"
-                className="portfolio-slide-img"
-              />
+          {images.map((img) => (
+            <div key={img.id} className="xpan-slide">
+              <img src={img.src} alt={img.filename} className="xpan-slide-img" loading="lazy" decoding="async" />
             </div>
           ))}
         </Slider>
@@ -62,4 +54,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Xpan;
