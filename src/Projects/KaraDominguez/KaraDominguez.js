@@ -7,7 +7,7 @@ import './KaraDominguez.css';
 const KaraDominguez = () => {
   let images = [];
   try {
-    const imagesContext = require.context('./images22', false, /\.(webp|jpe?g|png|gif)$/i);
+    const imagesContext = require.context('./images', false, /\.(webp|jpe?g|png|gif)$/i);
     images = imagesContext.keys().map((key) => {
       const src = imagesContext(key);
       const filename = key.replace('./', '');
