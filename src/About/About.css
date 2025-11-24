@@ -1,4 +1,21 @@
 .about-page {
+  background: var(--bg, #181818);
+  text-align: left;
+  padding: 15px;
+  margin-left: 30px;
+  color: var(--text, #d1d1d1);
+  min-height: 100vh;
+}
+
+.about-page h2 {
+  color: var(--text, #ffffff);
+  margin-top: 0;
+}
+
+.about-page p {
+  line-height: 1.6;
+}
+.about-page {
   background: #181818;
   text-align: left;
   padding: 15px;
