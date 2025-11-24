@@ -19,6 +19,12 @@ import LonelyLaundromat from './Projects/LonelyLaundromat/LonelyLaundromat';
 import MichelleTaylor from './Projects/MichelleTaylor/MichelleTaylor';
 import NickBike from './Projects/NickBike/NickBike';
 import Vanta from './Projects/Vanta/Vanta';
+import BratzDolls from './Projects/BratzDolls/BratzDolls';
+import Galveston from './Projects/Galveston/Galveston';
+import KierraPolaroid from './Projects/KierraPolaroid/KierraPolaroid';
+import StephanieJamesPolaroid from './Projects/StephanieJamesPolaroid/StephanieJamesPolaroid';
+import TheDucksAtTrinity from './Projects/TheDucksAtTrinity/TheDucksAtTrinity';
+import TrinityPark from './Projects/TrinityPark/TrinityPark';
 import KierraWilson from './Projects/KierraWilson/KierraWilson';
 import StephanieJames from './Projects/StephanieJames/StephanieJames';
 import { Routes, Route } from 'react-router-dom';
@@ -45,6 +51,12 @@ function App() {
         <Route path="/polaroids/polacon-8" element={<Polacon8 />} />
         <Route path="/polaroids/polacon-9" element={<Polacon9 />} />
         <Route path="/polaroids/polacon-10" element={<Polacon10 />} />
+        <Route path="/polaroids/bratz-dolls" element={<BratzDolls />} />
+        <Route path="/polaroids/galveston" element={<Galveston />} />
+        <Route path="/polaroids/kierra-polaroid" element={<KierraPolaroid />} />
+        <Route path="/polaroids/stephanie-james-polaroid" element={<StephanieJamesPolaroid />} />
+        <Route path="/polaroids/the-ducks-at-trinity" element={<TheDucksAtTrinity />} />
+        <Route path="/polaroids/trinity-park" element={<TrinityPark />} />
         <Route path="/projects" element={<ReverenceAndRuin />} />
         <Route path="/projects/nnamdi-25" element={<Nnamdi25 />} />
         <Route path="/projects/virtual-limbs" element={<VirtualLimbs />} />

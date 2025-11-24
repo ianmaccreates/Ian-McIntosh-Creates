@@ -22,6 +22,12 @@ const Sidebar = () => {
         { label: 'Polacon 8', to: '/polaroids/polacon-8' },
         { label: 'Polacon 9', to: '/polaroids/polacon-9' },
         { label: 'Polacon 10', to: '/polaroids/polacon-10' },
+        { label: 'Bratz Dolls', to: '/polaroids/bratz-dolls' },
+        { label: 'Galveston', to: '/polaroids/galveston' },
+        { label: 'Kierra Polaroids', to: '/polaroids/kierra-polaroid' },
+        { label: 'Stephanie James (Polaroids)', to: '/polaroids/stephanie-james-polaroid' },
+        { label: 'The Ducks at Trinity', to: '/polaroids/the-ducks-at-trinity' },
+        { label: 'Trinity Park', to: '/polaroids/trinity-park' },
       ],
     },
     {
