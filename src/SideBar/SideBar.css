@@ -1,6 +1,6 @@
 /* Sidebar.css */
 .sidebar-title {
-    color: #ffffff;
+    color: var(--sidebar-text, #ffffff);
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 20px;
@@ -13,7 +13,7 @@
   top: 0;
   width: 10rem;
   height: 100vh;
-  background: #181818;
+  background: var(--sidebar-bg, #000);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -31,7 +31,7 @@
 }
 
 .nav-link {
-  color: #d1d1d1;
+  color: var(--link-color, #d1d1d1);
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.2s, border-bottom 0.2s;
@@ -40,8 +40,8 @@
 }
 
 .nav-link:hover {
-  color: #ffffff;
-  border-bottom: 2px solid #fff;
+  color: var(--link-hover, #ffffff);
+  border-bottom: 2px solid var(--link-hover, #fff);
 }
 
 /* Expandable menu button */
@@ -77,11 +77,11 @@
   margin-top: 8px;
   margin-left: 12px;
   padding-left: 8px;
-  border-left: 2px solid #444;
+  border-left: 2px solid var(--submenu-border, #444);
 }
 
 .submenu-link {
-  color: #b0b0b0;
+  color: var(--submenu-link, #b0b0b0);
   text-decoration: none;
   font-size: 0.9rem;
   transition: color 0.2s;
@@ -91,7 +91,16 @@
 }
 
 .submenu-link:hover {
-  color: #ffffff;
-  border-bottom: 2px solid #fff;
+  color: var(--link-hover, #ffffff);
+  border-bottom: 2px solid var(--link-hover, #fff);
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding: 12px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 

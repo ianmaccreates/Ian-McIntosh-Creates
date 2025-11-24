@@ -3,6 +3,35 @@ body {
   font-family: "Andale Mono", "Noto Sans", "Lucida Console", "Lucida Sans Typewriter", "Monaco", "Courier New", "monospace";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Default to light unless body has .dark */
+  background: var(--bg, #ffffff);
+  color: var(--text, #000000);
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+/* Theme variables - light and dark classes on body control site colors */
+body.light {
+  --bg: #ffffff;
+  --text: #000000;
+  --header-bg: #f5f5f5;
+  --sidebar-bg: #ffffff;
+  --sidebar-text: #111111;
+  --link-color: #444444;
+  --link-hover: #000000;
+  --submenu-border: #ddd;
+  --submenu-link: #666;
+}
+
+body.dark {
+  --bg: #0a0a0a;
+  --text: #f5f5f5;
+  --header-bg: #121212;
+  --sidebar-bg: #000000;
+  --sidebar-text: #ffffff;
+  --link-color: #d1d1d1;
+  --link-hover: #ffffff;
+  --submenu-border: #444;
+  --submenu-link: #b0b0b0;
 }
 
 code {

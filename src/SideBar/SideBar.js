@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import "./SideBar.css";
+import ThemeToggle from '../ThemeToggle/ThemeToggle';
 
 const Sidebar = () => {
   const [expanded, setExpanded] = useState({});
@@ -88,6 +89,9 @@ const Sidebar = () => {
           Instagram
         </a>
       </nav>
+      <div className="sidebar-footer">
+        <ThemeToggle />
+      </div>
     </aside>
   );
 };
