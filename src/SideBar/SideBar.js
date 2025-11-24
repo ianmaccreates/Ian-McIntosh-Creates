@@ -41,6 +41,8 @@ const Sidebar = () => {
             { label: 'Michelle Taylor', to: '/projects/michelle-taylor' },
             { label: 'Nick Bike', to: '/projects/nick-bike' },
             { label: 'Vanta', to: '/projects/vanta' },
+            { label: 'Kierra Wilson', to: '/projects/kierra-wilson' },
+            { label: 'Stephanie James', to: '/projects/stephanie-james' },
       ],
     },
     { label: 'About', to: '/info', key: 'about' },

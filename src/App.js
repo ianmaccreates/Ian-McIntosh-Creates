@@ -19,6 +19,8 @@ import LonelyLaundromat from './Projects/LonelyLaundromat/LonelyLaundromat';
 import MichelleTaylor from './Projects/MichelleTaylor/MichelleTaylor';
 import NickBike from './Projects/NickBike/NickBike';
 import Vanta from './Projects/Vanta/Vanta';
+import KierraWilson from './Projects/KierraWilson/KierraWilson';
+import StephanieJames from './Projects/StephanieJames/StephanieJames';
 import { Routes, Route } from 'react-router-dom';
 
 function Home() {
@@ -55,6 +57,8 @@ function App() {
         <Route path="/projects/michelle-taylor" element={<MichelleTaylor />} />
         <Route path="/projects/nick-bike" element={<NickBike />} />
         <Route path="/projects/vanta" element={<Vanta />} />
+        <Route path="/projects/kierra-wilson" element={<KierraWilson />} />
+        <Route path="/projects/stephanie-james" element={<StephanieJames />} />
         <Route path="/projects/xpan" element={<Xpan />} />
         <Route path="/info" element={<About />} />
         <Route path="/contact" element={<Contact />} />
