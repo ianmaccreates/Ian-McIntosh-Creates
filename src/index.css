@@ -1,13 +1,12 @@
 /* Global font token (override by theme if needed) */
 :root {
-  --font-base: "Josefin Sans", sans-serif;
+  --font-base: "Anton", sans-serif;
 }
 
 body {
   margin: 0;
   font-family: var(--font-base);
   font-size: 30px;
-  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
@@ -18,10 +17,9 @@ body {
   transition: background-color 200ms ease, color 200ms ease;
 }
 
-/* Utility class for Josefin Sans */
-.josefin-sans {
-  font-family: "Josefin Sans", sans-serif;
-  font-optical-sizing: auto;
+/* Utility class for Anton */
+.anton-regular {
+  font-family: "Anton", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
