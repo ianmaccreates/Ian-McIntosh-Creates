@@ -1,6 +1,6 @@
 /* Global font tokens */
 :root {
-  --font-base: "Josefin Sans", sans-serif;
+  --font-base: "Big Shoulders Inline", sans-serif;
   --font-heading: "Paytone One", sans-serif;
 }
 
@@ -26,9 +26,9 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
 }
 
-/* Utility class for Josefin Sans */
-.josefin-sans {
-  font-family: "Josefin Sans", sans-serif;
+/* Utility class for Big Shoulders Inline */
+.big-shoulders-inline {
+  font-family: "Big Shoulders Inline", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
