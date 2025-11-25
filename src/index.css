@@ -1,12 +1,11 @@
 /* Global font token (override by theme if needed) */
 :root {
-  --font-base: "Stack Sans Notch", sans-serif;
+  --font-base: "Alumni Sans Pinstripe", sans-serif;
 }
 
 body {
   margin: 0;
   font-family: var(--font-base);
-  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
@@ -17,12 +16,17 @@ body {
   transition: background-color 200ms ease, color 200ms ease;
 }
 
-/* Utility class if specific elements need explicit font */
-.stack-sans-notch {
-  font-family: var(--font-base);
-  font-optical-sizing: auto;
-  font-weight: 400; /* Adjust weight as needed */
+/* Utility classes for Alumni Sans Pinstripe variants */
+.alumni-sans-pinstripe-regular {
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-weight: 400;
   font-style: normal;
+}
+
+.alumni-sans-pinstripe-regular-italic {
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-weight: 400;
+  font-style: italic;
 }
 
 /* Theme variables - light and dark classes on body control site colors */
