@@ -1,12 +1,14 @@
-/* Global font token (override by theme if needed) */
+/* Global font tokens */
 :root {
-  --font-base: "Anton", sans-serif;
+  --font-base: "Josefin Sans", sans-serif;
+  --font-heading: "Paytone One", sans-serif;
 }
 
 body {
   margin: 0;
   font-family: var(--font-base);
   font-size: 30px;
+  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
@@ -17,9 +19,24 @@ body {
   transition: background-color 200ms ease, color 200ms ease;
 }
 
-/* Utility class for Anton */
-.anton-regular {
-  font-family: "Anton", sans-serif;
+/* Heading styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Utility class for Josefin Sans */
+.josefin-sans {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Utility class for Paytone One */
+.paytone-one-regular {
+  font-family: "Paytone One", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
