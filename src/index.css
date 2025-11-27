@@ -1,14 +1,13 @@
 /* Global font tokens */
 :root {
-  --font-base: "Big Shoulders Inline", sans-serif;
-  --font-heading: "Paytone One", sans-serif;
+  --font-base: "Pompiere", sans-serif;
+  --font-heading: "Pompiere", sans-serif;
 }
 
 body {
   margin: 0;
   font-family: var(--font-base);
   font-size: 30px;
-  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
@@ -26,17 +25,9 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
 }
 
-/* Utility class for Big Shoulders Inline */
-.big-shoulders-inline {
-  font-family: "Big Shoulders Inline", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* Utility class for Paytone One */
-.paytone-one-regular {
-  font-family: "Paytone One", sans-serif;
+/* Utility class for Pompiere */
+.pompiere-regular {
+  font-family: "Pompiere", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
