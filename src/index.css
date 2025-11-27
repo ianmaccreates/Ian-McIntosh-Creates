@@ -1,13 +1,14 @@
 /* Global font tokens */
 :root {
-  --font-base: "Pompiere", sans-serif;
-  --font-heading: "Pompiere", sans-serif;
+  --font-base: "DM Mono", monospace;
+  --font-heading: "DM Mono", monospace;
 }
 
 body {
   margin: 0;
   font-family: var(--font-base);
-  font-size: 30px;
+  font-size: 35px;
+  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
@@ -25,11 +26,41 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
 }
 
-/* Utility class for Pompiere */
-.pompiere-regular {
-  font-family: "Pompiere", sans-serif;
+/* Utility classes for DM Mono */
+.dm-mono-light {
+  font-family: "DM Mono", monospace;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.dm-mono-regular {
+  font-family: "DM Mono", monospace;
   font-weight: 400;
   font-style: normal;
+}
+
+.dm-mono-medium {
+  font-family: "DM Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.dm-mono-light-italic {
+  font-family: "DM Mono", monospace;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.dm-mono-regular-italic {
+  font-family: "DM Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.dm-mono-medium-italic {
+  font-family: "DM Mono", monospace;
+  font-weight: 500;
+  font-style: italic;
 }
 
 /* Theme variables - light and dark classes on body control site colors */
